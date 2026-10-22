@@ -1,0 +1,137 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+          margin:0;
+	  font-family:sans-serif;
+      } #top {
+	  display: grid;
+	  grid-template-rows: repeat(3, minmax(0, 1fr));
+	  height: 50vh;
+      } #bottom {
+	  display: grid;
+	  grid-template-columns: repeat(4, minmax(0, 1fr));
+	  height: 50vh;
+	  box-sizing: border-box;
+      } .interfaceRows {
+	  outline:solid 1px black;
+	  display: grid;
+	  grid-template-columns: repeat(10, 1fr);
+      } .tiles {
+	      display: grid;
+	      grid-template-rows: repeat(4, 1fr);
+	      place-items: center;
+
+	      min-width: 0;
+	      min-height: 0;
+	      padding: 6px;
+
+	      border: 1px solid #ccc;
+	      background: #fff;
+	      cursor: pointer;
+	      user-select: none;
+      } .controlColumns {
+	  display: flex;
+	  flex-direction: column;
+	  min-width: 0;
+	  min-height: 0;
+	  overflow-y: auto;
+	  outline:solid 1px black;
+      } .controlColumns > h2 {
+	  display: block;
+	  margin: 0;
+	  padding: 0;
+	  font-size: 1.1rem;
+	  font-weight: 500;
+	  line-height: inherit;
+	  outline:black 1px solid;
+	  text-align:center;
+      }.keyCode {
+    font-family: inherit;
+    font-size: 0.85rem;
+    color: #666;
+} .controlColumns button, .controlColumns input {
+    align-self:flex-start;
+} .basicControls {
+    margin:16px;
+} label {
+    margin-right:2vw;
+    display:inline-block;
+    width:13ch;
+} #rootFrequency {
+    width:5em;
+}
+
+/* beginning of generative controls */
+
+#generativeControlBox {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:1rem;
+} #generativeControlBox h2 {
+    align-self: stretch;
+    text-align: center;
+} #generativeControlBox input {
+    width:6ch;
+}
+
+.generativeControls {
+    margin:16px;
+} #generatedHarmonics {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.harmonic {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    border: 1px solid #ccc;
+    width:20vw;
+
+} .harmonic span {
+    outline:solid 1px black;
+    text-align:center;
+} #generatedHarmonics article > :first-child {
+    cursor:pointer;
+} #generatedHarmonics article > :last-child {
+    text-align:left;
+    padding-left:1ch;
+}
+
+/* end of generative controls */
+
+.fraction {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.decimal {
+    font-size: 0.9rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.frequency {
+    font-size: 0.8rem;
+    color: #777;
+    font-variant-numeric: tabular-nums;
+}
+
+.tiles:hover {
+    background: #f0f0f0;
+}
+
+.tiles.active {
+    background: #222;
+    color: white;
+}
+
+.tiles.active .keyCode,
+.tiles.active .frequency {
+    color: #ddd;
+}
+
+      
