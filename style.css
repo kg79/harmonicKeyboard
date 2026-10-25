@@ -102,7 +102,94 @@ body {
     padding-left:1ch;
 }
 
-/* end of generative controls */
+/* end of generative and beginning of organizational controls */
+
+#organizationalControlBox {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+#organizationalControlBox h2 {
+    width:100%;
+}
+#scale {
+    margin-top:1vh;
+}
+#scale .harmonic {
+
+}
+#scale {
+    margin-top: 1vh;
+    border-collapse: collapse;
+    width: 90%;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+
+#scale th {
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 8px;
+    border-bottom: 1px solid #999;
+}
+
+#scale td {
+    padding: 6px 8px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #eee;
+}
+
+#scale tbody tr:hover {
+    background: #f0f0f0;
+}
+
+/* end of organizational, beginning of analytical controls */
+
+#matrixContainer {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+#intervalMatrix {
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#intervalMatrix th,
+#intervalMatrix td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    min-width: 55px;
+}
+
+#intervalMatrix th {
+    background: #f0f0f0;
+    position: sticky;
+    top: 0;
+}
+
+#intervalMatrix tbody th {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+}
+
+#intervalMatrix thead th:first-child {
+    left: 0;
+    z-index: 2;
+}
+
+#intervalMatrix td:hover {
+    background: #e0e0e0;
+    cursor: pointer;
+}
+
+
+/* end of analytical controls */
 
 .fraction {
     font-size: 1.4rem;
